@@ -41,22 +41,39 @@ superen el límite de un millón.
 3. Añadid también la biblioteca Hamcrest por si queréis escribir test utilizando  la aserción `assertThat`.
 Para ello, repetid los pasos anteriores con las coordenadas `org.hamcrest:hamcrest:jar:3.0`.
 
+4. Observad las clases `SecuenciaCollatz`,`Main` y sus métodos.
+
+5. Clase `SecuenciasCollatzTestSiguiente`
+   - Diseñad pruebas basadas en la especificación para el método 
+     `siguienteCollatz` aplicando particiones de equivalencia.
+   - Por cada prueba diseñada:
+       - Escribid un test en JUnit.
+       - Ejecutad el test y comprobar que falla.
+       - Añadid el código necesario para que el test pase.
+       - Comprobad que la cobertura del método `siguienteCollatz` en modo 
+         _tracing_ es del 100 %.
+   - Usad la secuencia de ejemplo del enunciado como _test basis_ para obtener
+     casos de prueba adicionales, aunque sean redundantes.  
+   - Convertid las pruebas diseñadas en tests JUnit parametrizados. Utilizad test parametrizados con las etiquetas `@CsvSource` y `@CsvFileSource` y test dinámicos.
  
- 4. Clase `SecuenciasCollatzTestLongitud`
-    - Diseñad pruebas para el método `longitud`.
-      - Basaos, por una parte, en la secuencia de ejemplo del enunciado. 
-        Se trata de una única secuencia, pero podemos distinguir 9 subsecuencias
-        más que terminan en 1.
-      - Completad los casos de prueba calculando _a mano_ las longitudes de las
-        secuencias iniciadas por los números del 1 al 10.
-    - Escribid un test parametrizado en el que ir incluyendo las pruebas diseñadas.
-      Incluirlas de una en una y observad como va aumentando la cobertura del
-      código conforme las vais añadiendo.
+6. Clase `SecuenciasCollatzTestLongitud`
+   - Diseñad pruebas para el método `longitud`.
+     - Basaos, por una parte, en la secuencia de ejemplo del enunciado. 
+       Se trata de una única secuencia, pero podemos distinguir 9 subsecuencias
+       más que terminan en 1.
+     - Completad los casos de prueba calculando _a mano_ las longitudes de las
+       secuencias iniciadas por los números del 1 al 10.
+   - Escribid un test parametrizado en el que ir incluyendo las pruebas diseñadas.
+     Incluirlas de una en una y observad como va aumentando la cobertura del
+     código conforme las vais añadiendo.
       
- 5. Clase `IniciadorSecuenciaMasLargaTest`
-    - Diseño de pruebas basadas en la especificación (basaos en las longitudes
-      de las secuencias iniciadas por los números del 1 al 10 que habéis
-      calculado antes).
+7. Clase `IniciadorSecuenciaMasLargaTest`
+   - Diseño de pruebas basadas en la especificación (basaos en las longitudes
+     de las secuencias iniciadas por los números del 1 al 10 que habéis
+     calculado antes).
  
- 6. Resto de métodos
-    - Añadid pruebas hasta alcanzar una cobertura del 100% en modo _tracing_.
+8. Resto de métodos
+   - Añadid pruebas hasta alcanzar una cobertura del 100% en modo _tracing_.
+
+9. Si acabáis, podéis repetir la escritura de test parametrizados utilizando JUnit 4.
+Para ello, tendréis que utilizar la biblioteca de coordenadas Maven `junit:junit:jar:4.13.2`. 
