@@ -36,7 +36,7 @@ superen el límite de un millón.
    - org.junit.jupiter:junit-jupiter:6.0.3
    - Seleccionad _Transitive dependencies_, _Sources_, _JavaDocs_ y _Annotations_
    - Aceptad que se añada al módulo unizar-vv-collatz.
-   - En _Modules_, estableced su ámbito como _Test_.
+   - En _Modules_ | _Dependencies_, estableced su ámbito como _Test_.
 
 3. Añadid también la biblioteca Hamcrest por si queréis escribir test utilizando  la aserción `assertThat`.
 Para ello, repetid los pasos anteriores con las coordenadas `org.hamcrest:hamcrest:jar:3.0`.
